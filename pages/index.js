@@ -10,15 +10,20 @@ export default function Home() {
 
    // const url = 'https://api.github.com/users/${username}';
 
-    fetch('https://api.github.com/users/${username}')
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.message) {
-        setData([data.message]); // HNA ERR KANT BLA ARRAY
-      }
-    })
-    .catch(error => console.error('Error:', error));
+   fetch(`https://api.github.com/users/${username}`)
+   .then(response => response.json())
+   .then(userData  => {
+     if (userData  && userData.message) {
+       setData({error:userData.message}); // HNA ERR KANT BLA ARRAY
+     }else{
+       setData(userData);
+     }
+   })
+   .catch(error => console.error('Error:', error));
 }, [username]);
+
+
+console.log(data);
 
 
 console.log(data);
