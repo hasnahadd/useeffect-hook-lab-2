@@ -1,13 +1,16 @@
-export default function UserCard() {
+export default function UserCard({name ,user, avatar}) {
+
   return (
+
     <div className="user-card">
       <div>
-        <img alt="avatar" />
+        <img src= {avatar} alt="avatar" />
       </div>
       <div>
-        <h5> Name:</h5>
+        
+        <h5> Name:{name}</h5>
 
-        <p> Username: </p>
+        <p> Username: {user}</p>
       </div>
     </div>
   );

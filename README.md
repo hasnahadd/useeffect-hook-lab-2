@@ -8,7 +8,6 @@ You are suppose to update one page and two components:
 index page: Responsible for fetch operation and state changes in the application.
 Form component: A search bar to get the user input for GitHub username.
 UserCard component: A reusable component to display the GitHub user information.
-
 Instructions:
 1- In the index.jsx page, we should have two state variables, one for input from the user and second response from the REST API. We need to fetch the user data, every time there is an update to the username. To achieve this, you are going to use useEffect.
 
